@@ -2,6 +2,12 @@
 
 require_once("SegmentoAgz.php");
 
+/**
+ * abstract class RegistroAgz 
+ * 
+ * Responsável por organizar segmentos AGZ e formatar seus conteúdos de forma a construir os registros de um arquivo.
+ */
+
 abstract class RegistroAgz{
     /**
      * @var SegmentoAgz[]

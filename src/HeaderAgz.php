@@ -2,6 +2,11 @@
 
 require_once("RegistroAgz.php");
 
+/**
+ * class HeaderAgz
+ * 
+ * Parametriza registros do tipo A.
+ */
 class HeaderAgz extends RegistroAgz{
     /**
      * Construtor.

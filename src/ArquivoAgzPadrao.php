@@ -2,6 +2,11 @@
 
 require_once("ArquivoAgz.php");
 
+/**
+ * class ArquivoAgzPadrao
+ * 
+ * Contém métodos para geração de um arquivo Febraban AGZ padrão em um caminho especificado.
+ */
 class ArquivoAgzPadrao extends ArquivoAgz
 {
 

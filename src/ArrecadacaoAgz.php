@@ -2,6 +2,11 @@
 
 require_once("RegistroAgz.php");
 
+/**
+ * class ArrecadacaoAgz
+ * 
+ * Parametriza registros do tipo G.
+ */
 class ArrecadacaoAgz extends RegistroAgz{
     /**
      * Construtor.

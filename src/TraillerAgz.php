@@ -2,6 +2,11 @@
 
 require_once("RegistroAgz.php");
 
+/**
+ * class TraillerAgz
+ * 
+ * Parametriza registros do tipo Z.
+ */
 class TraillerAgz extends RegistroAgz{
     /**
      * Construtor.

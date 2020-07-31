@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class SegmentoAgz
+ * class SegmentoAgz
  * 
  * Cria e formata segmentos de registros dos arquivos AGZ.
  * 

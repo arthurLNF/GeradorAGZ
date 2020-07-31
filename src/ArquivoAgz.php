@@ -4,6 +4,11 @@ require_once("HeaderAgz.php");
 require_once("ArrecadacaoAgz.php");
 require_once("TraillerAgz.php");
 
+/**
+ * abstract class ArquivoAgz 
+ * 
+ * Contém as funcionalidades básicas para geração de arquivis AGZ.
+ */
 abstract class ArquivoAgz{
     /**
      * Header do arquivo.
@@ -142,7 +147,8 @@ abstract class ArquivoAgz{
         return $conteudo;       
     }
 
-    /**Valida o arquivo AGZ.
+    /**
+     * Valida o arquivo AGZ.
      * @return void
      * @throws Exception
      */
