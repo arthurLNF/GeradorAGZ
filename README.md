@@ -1,4 +1,4 @@
-# Gerador Arquivos Febraban AGZ - “Layout” Padrão de Arrecadação/Recebimento com Utilização do Código de Barras
+# Gerador de Arquivos Febraban AGZ - “Layout” Padrão de Arrecadação/Recebimento com Utilização do Código de Barras
 
 Note: This repository is in portuguese because AGZ files are used most commonly in Brazil. The whole code documentation is in portuguese and can be found in the directory 'docs'.
 
