@@ -14,12 +14,6 @@ abstract class RegistroAgz{
     protected $registro;
 
     /**
-     * Armazena a linha em que o registro se encontra. Deve ser um inteiro maior que zero.
-     * @var int
-     */
-    protected $linha;
-
-    /**
      * Construtor.
      * 
      * Recebe a linha do arquivo em que o registro será impresso e inicializa o array de registros.
@@ -28,12 +22,8 @@ abstract class RegistroAgz{
      * 
      * @param int $linha
      */
-    public function __construct(int $linha){
-        if($linha <= 0){
-            throw new Exception("A linha deve ser maior que zero.");
-        }
+    public function __construct(){       
         $this->segmentos = [];
-        $this->linha = $linha;
         $this->registro = "";
     }
 
@@ -82,10 +72,11 @@ abstract class RegistroAgz{
     * 
     * @param SegmentoAgz $segmento
     * 
-    * @return void
+    * @return self
     */
     public function adicionarSegmento(SegmentoAgz $segmento){
         $this->segmentos[] = $segmento;
+        return $this;
     }
 }
 

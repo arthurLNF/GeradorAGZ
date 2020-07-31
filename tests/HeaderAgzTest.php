@@ -6,15 +6,11 @@ use PHPUnit\Framework\TestCase;
 
 class HeaderAgzTest extends TestCase{
     public function testCriarHeader(){
-        $header = new HeaderAgz(1);
+        $header = new HeaderAgz();
         $this->assertEquals($header->getRegistro(), 'A                                                                                                                                                     ');
     }
-    public function testCriarHeaderComLinhaZeroDeveLancarException(){
-        $this->expectExceptionMessage("A linha deve ser maior que zero.");
-        $header = new HeaderAgz(0);
-    }
     public function testAdicionarSegmentosAoHeaderForaDeOrdem(){
-        $header = new HeaderAgz(1);
+        $header = new HeaderAgz();
         $segmento = new SegmentoAgz(3, 1, "8", SegmentoAgz::NUMERICO);
         $header->adicionarSegmento($segmento);
         $segmento = new SegmentoAgz(2, 1, "9", SegmentoAgz::NUMERICO);
@@ -26,7 +22,7 @@ class HeaderAgzTest extends TestCase{
         $this->assertEquals($header->getRegistro(), 'A98 A 7                                                                                                                                               ');
     }
     public function testMontarHeaderFebraban(){
-        $header = new HeaderAgz(1);
+        $header = new HeaderAgz();
         $segmento = new SegmentoAgz(2, 1, "9", SegmentoAgz::NUMERICO);
         $header->adicionarSegmento($segmento);
         $segmento = new SegmentoAgz(3, 20, "141415", SegmentoAgz::ALFANUMERICO);

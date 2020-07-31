@@ -9,12 +9,8 @@ class ArrecadacaoAgzTest extends TestCase{
         $arrecadacao = new ArrecadacaoAgz(1);
         $this->assertEquals($arrecadacao->getRegistro(), 'G                                                                                                                                                     ');
     }
-    public function testCriarArrecadacaoComLinhaZeroDeveLancarException(){
-        $this->expectExceptionMessage("A linha deve ser maior que zero.");
-        $arrecadacao = new ArrecadacaoAgz(0);
-    }
     public function testAdicionarSegmentosArrecadacaoForaDeOrdem(){
-        $arrecadacao = new ArrecadacaoAgz(1);
+        $arrecadacao = new ArrecadacaoAgz();
         $segmento = new SegmentoAgz(3, 1, "8", SegmentoAgz::NUMERICO);
         $arrecadacao->adicionarSegmento($segmento);
         $segmento = new SegmentoAgz(2, 1, "9", SegmentoAgz::NUMERICO);
@@ -26,7 +22,7 @@ class ArrecadacaoAgzTest extends TestCase{
         $this->assertEquals($arrecadacao->getRegistro(), 'G98 A 7                                                                                                                                               ');
     }
     public function testMontarArrecadacaoFebraban(){
-        $arrecadacao = new ArrecadacaoAgz(2);
+        $arrecadacao = new ArrecadacaoAgz();
         $segmento = new SegmentoAgz(2, 20, "18732 324183", SegmentoAgz::ALFANUMERICO);
         $arrecadacao->adicionarSegmento($segmento);
         $segmento = new SegmentoAgz(22, 8, "20200730", SegmentoAgz::ALFANUMERICO);
